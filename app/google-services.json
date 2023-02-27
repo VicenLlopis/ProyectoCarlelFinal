@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "189433315275",
+    "firebase_url": "https://proyectocarles-default-rtdb.firebaseio.com",
+    "project_id": "proyectocarles",
+    "storage_bucket": "proyectocarles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189433315275:android:b1abdafd358f0bb64dc04e",
+        "android_client_info": {
+          "package_name": "com.example.proyectocarlelfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189433315275-a9i114r72qqiaf8i1hl17ntlqaas4bjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBCBH268agvrNFDaX17NlobKvoo2Vk_Eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189433315275-1b6cfjh6oeu6tcumkfai7habfl30v1j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
