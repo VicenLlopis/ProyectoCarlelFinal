@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -52,32 +53,31 @@ public class NotificationsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+
         mapView.setTileSource(TileSourceFactory.MAPNIK);
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION};
         requestPermissionsIfNecessary(permissions);
         mapView.getZoomController().setVisibility(CustomZoomButtonsController.Visibility.SHOW_AND_FADEOUT);
 
-        mapView.setMultiTouchControls(true);
-        IMapController mapController = mapView.getController();
-        mapController.setZoom(16.5);
+        IMapController mapController = binding.mapView.getController();
 
 
 
         MyLocationNewOverlay myLocationNewOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(requireContext()), mapView);
         myLocationNewOverlay.enableMyLocation();
         mapView.getOverlays().add(myLocationNewOverlay);
-        /*binding.mapView.setTileSource(TileSourceFactory.MAPNIK);
+        binding.mapView.setTileSource(TileSourceFactory.MAPNIK);
         binding.mapView.setBuiltInZoomControls(true);
         binding.mapView.setMultiTouchControls(true);
-        IMapController mapController = binding.mapView.getController();
 
         mapController.setZoom(14.5);
-        GeoPoint startPoint = new GeoPoint(49.4715612, 0.3930977);
+        GeoPoint startPoint = new GeoPoint(39.888802, -0.081957);
         mapController.setCenter(startPoint);
         Marker startMarker = new Marker(binding.mapView);
         startMarker.setPosition(startPoint);
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        binding.mapView.getOverlays().add(startMarker);*/
+        binding.mapView.getOverlays().add(startMarker);
 
     }
     @Override

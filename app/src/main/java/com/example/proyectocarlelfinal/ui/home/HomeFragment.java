@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
 
         sharedViewModel.getUser().observe(getViewLifecycleOwner(), user -> {
             authUser = user;
+
         });
 
 

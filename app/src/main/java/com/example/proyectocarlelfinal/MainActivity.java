@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Locale userLocale = Locale.getDefault(); // Get the user's default locale
-        String userLanguage = "spanish"; // Get the user's language
+       /* Locale userLocale = Locale.getDefault(); // Get the user's default locale
+        String userLanguage = "es"; // Get the user's language
 
 // Set the default locale of the application to the user's language
         Locale.setDefault(new Locale(userLanguage));
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 new AuthUI.IdpConfig.EmailBuilder()
                         .setRequireName(true)
                         .setAllowNewAccounts(true)
+
                         .build());
 
         try {
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
             // Handle exceptions
         }
         FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.setLanguageCode("es");
         Log.e("XXXX", String.valueOf(auth.getCurrentUser()));
         if (auth.getCurrentUser() == null) {
             Intent signInIntent =
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             signInLauncher.launch(signInIntent);
         } else {
             sharedViewModel.setUser(auth.getCurrentUser());
-        }
+        }*/
     }
 
 }

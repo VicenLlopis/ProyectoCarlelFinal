@@ -49,6 +49,7 @@ public class DashboardFragment extends Fragment {
 
         buttonFoto.setOnClickListener(button -> {
             dispatchTakePictureIntent();
+
         });
         return root;
     }
@@ -73,6 +74,7 @@ public class DashboardFragment extends Fragment {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(
                 getContext().getPackageManager()) != null) {
+
             File photoFile = null;
             try {
                 photoFile = createImageFile();
@@ -80,6 +82,7 @@ public class DashboardFragment extends Fragment {
             }
 
             if (photoFile != null) {
+
                 photoURI = FileProvider.getUriForFile(getContext(),
                         "com.example.android.fileprovider",
                         photoFile);
@@ -87,6 +90,7 @@ public class DashboardFragment extends Fragment {
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
+
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
